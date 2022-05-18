@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;  
+        }
+
+        body {
+            background-image: url(images/index.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        section {
+            position: relative;
+        }
+
+        #login_button {
+            border: 0;
+            border-radius: 10px;
+            padding: 13px 22px 13px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #login_button:hover {
+            transition:0.27s linear;
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        .loader {
+            position : fixed;
+            top : 0px;
+            left : 0px;
+            height : 100%;
+            width : 100%;
+        }
+   
+        article  {
+            display: block;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            width:100%;
+            animation: anim_text 1s ease 1;
+        }
+
+        #text {
+            color: black;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius:5px;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255,255,255,0.4);
+            z-index:1000; 
+            position: absolute;
+            text-align: center;
+            padding:15px 25px;
+        }
+
+        @keyframes anim_text {
+            0% {top:0;}
+            100% {top:50%;}
+        }
+
+    </style>
+    <body>
+        <article>
+                <p id="text">MOSAIC EVENTS</p>
+        </article>
+        
+        <section>
+                <div class="loader" id="loader">
+                    <div class="carousel-caption">
+                        <button id="login_button" type="button" onclick="change();">Let's Go !!!</button>
+
+                        <script type="text/javascript">
+                                function change(){
+                                    window.location="login.php";
+                                }
+                        </script>
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>
